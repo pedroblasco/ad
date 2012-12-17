@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{496EBF2A-6229-42E9-A45A-437B06ADA30B}</ProjectGuid>
+    <ProjectGuid>{5D100B81-2E4A-49DA-8436-1F26C80771DB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PCategoria</RootNamespace>
-    <AssemblyName>PCategoria</AssemblyName>
+    <RootNamespace>PTreeView</RootNamespace>
+    <AssemblyName>PTreeView</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,8 +57,6 @@
       <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="Mono.Posix" />
-    <Reference Include="Npgsql" />
-    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">

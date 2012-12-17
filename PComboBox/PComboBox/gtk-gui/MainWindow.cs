@@ -6,9 +6,9 @@ public partial class MainWindow
 	private global::Gtk.UIManager UIManager;
 	private global::Gtk.VBox vbox1;
 	private global::Gtk.Toolbar toolbar1;
-	private global::Gtk.HBox hbox1;
-	private global::Gtk.Label label1;
+	private global::Gtk.Table table1;
 	private global::Gtk.ComboBox comboBox;
+	private global::Gtk.Label label1;
 	
 	protected virtual void Build ()
 	{
@@ -36,28 +36,29 @@ public partial class MainWindow
 		w2.Expand = false;
 		w2.Fill = false;
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.hbox1 = new global::Gtk.HBox ();
-		this.hbox1.Name = "hbox1";
-		this.hbox1.Spacing = 6;
-		// Container child hbox1.Gtk.Box+BoxChild
-		this.label1 = new global::Gtk.Label ();
-		this.label1.Name = "label1";
-		this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("Categoría");
-		this.hbox1.Add (this.label1);
-		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.label1]));
-		w3.Position = 0;
-		w3.Expand = false;
-		w3.Fill = false;
-		// Container child hbox1.Gtk.Box+BoxChild
+		this.table1 = new global::Gtk.Table (((uint)(1)), ((uint)(2)), false);
+		this.table1.Name = "table1";
+		this.table1.RowSpacing = ((uint)(6));
+		this.table1.ColumnSpacing = ((uint)(6));
+		// Container child table1.Gtk.Table+TableChild
 		this.comboBox = new global::Gtk.ComboBox ();
 		this.comboBox.Name = "comboBox";
-		this.hbox1.Add (this.comboBox);
-		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.comboBox]));
-		w4.Position = 1;
-		w4.Expand = false;
-		w4.Fill = false;
-		this.vbox1.Add (this.hbox1);
-		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox1]));
+		this.table1.Add (this.comboBox);
+		global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.table1 [this.comboBox]));
+		w3.LeftAttach = ((uint)(1));
+		w3.RightAttach = ((uint)(2));
+		w3.XOptions = ((global::Gtk.AttachOptions)(4));
+		w3.YOptions = ((global::Gtk.AttachOptions)(4));
+		// Container child table1.Gtk.Table+TableChild
+		this.label1 = new global::Gtk.Label ();
+		this.label1.Name = "label1";
+		this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("Etiqueta del combo");
+		this.table1.Add (this.label1);
+		global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.table1 [this.label1]));
+		w4.XOptions = ((global::Gtk.AttachOptions)(4));
+		w4.YOptions = ((global::Gtk.AttachOptions)(4));
+		this.vbox1.Add (this.table1);
+		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.table1]));
 		w5.Position = 1;
 		w5.Expand = false;
 		w5.Fill = false;
