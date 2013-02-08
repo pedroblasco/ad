@@ -12,7 +12,8 @@
     <action-group name="Default">
       <action id="executeAction">
         <property name="Type">Action</property>
-        <property name="Label" translatable="yes" />
+        <property name="Label" translatable="yes">_Ejecutar</property>
+        <property name="ShortLabel" translatable="yes">_Ejecutar</property>
         <property name="StockId">gtk-execute</property>
         <signal name="Activated" handler="OnExecuteActionActivated" />
       </action>
@@ -29,7 +30,7 @@
           <widget class="Gtk.Toolbar" id="toolbar1">
             <property name="MemberName" />
             <property name="ShowArrow">False</property>
-            <node name="__gtksharp_104_Stetic_Editor_ActionToolbar" type="Toolbar">
+            <node name="__gtksharp_96_Stetic_Editor_ActionToolbar" type="Toolbar">
               <node type="Toolitem" action="executeAction" />
             </node>
           </widget>

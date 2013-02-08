@@ -50,6 +50,10 @@ namespace PArticulo
 			
 			entryNombre.Text = (string)dataReader["nombre"];
 			spinButtonPrecio.Value = Convert.ToDouble( (decimal)dataReader["precio"] );
+
+			long categoria = dataReader["categoria"] is DBNull ? 0 : (long)dataReader["categoria"];
+			
+			Console.WriteLine("categoria={0}", categoria);
 			
 			dataReader.Close ();
 			

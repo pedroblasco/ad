@@ -14,7 +14,8 @@ public partial class MainWindow
 		// Widget MainWindow
 		this.UIManager = new global::Gtk.UIManager ();
 		global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup ("Default");
-		this.executeAction = new global::Gtk.Action ("executeAction", null, null, "gtk-execute");
+		this.executeAction = new global::Gtk.Action ("executeAction", global::Mono.Unix.Catalog.GetString ("_Ejecutar"), null, "gtk-execute");
+		this.executeAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("_Ejecutar");
 		w1.Add (this.executeAction, null);
 		this.UIManager.InsertActionGroup (w1, 0);
 		this.AddAccelGroup (this.UIManager.AccelGroup);

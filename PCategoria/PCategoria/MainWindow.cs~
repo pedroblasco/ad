@@ -22,7 +22,7 @@ public partial class MainWindow: Gtk.Window
 		
 		comboBox.Model = listStore;
 		
-		string connectionString = "Server=localhost;Database=dbarticulo;User Id=pedro;Password=sistemas";
+		string connectionString = "Server=localhost;Database=dbprueba;User Id=dbprueba;Password=sistemas";
 		IDbConnection dbConnection = new NpgsqlConnection(connectionString);
 		dbConnection.Open ();
 		
