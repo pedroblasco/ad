@@ -35,8 +35,12 @@ public partial class MainWindow: Gtk.Window
 	private void loadArticulo(ISessionFactory sessionFactory) {
 		using (ISession session = sessionFactory.OpenSession()) {
 			Articulo articulo = (Articulo)session.Load (typeof(Articulo), 2L);
-			Console.WriteLine ("Articulo Id={0} Nombre={1} Precio={2}", 
+			Console.Write ("Articulo Id={0} Nombre={1} Precio={2}", 
 			                   articulo.Id, articulo.Nombre, articulo.Precio);
+			if(articulo.Categoria == null)
+				Console.WriteLine("Categoria=nulL");
+			else
+				Console.WriteLine ("Categoria.Id{0}", articulo.Categoria.Id);
 		}
 	}
 		
